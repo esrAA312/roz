@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>روزا بِلا | الفروع</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+<style>
+:root{
+    --pink:#e91e63;
+    --soft-pink:#f4c2d7;
+    --green:#4caf50;
+    --bg:#f7f1f4;
+}
+
+body{
+    background:var(--bg);
+    font-family:Tahoma, sans-serif;
+    color:#333;
+}
+
+.header-box{
+    background:linear-gradient(135deg,var(--pink),#ff5f8f);
+    color:#fff;
+    padding:30px 15px;
+    border-radius:0 0 25px 25px;
+}
+
+.logo{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:3px solid #fff;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.region-btn{
+    background:#fff;
+    border:2px solid var(--pink);
+    color:var(--pink);
+    font-weight:bold;
+    padding:15px;
+    border-radius:14px;
+    transition:.3s;
+}
+
+.region-btn:hover{
+    background:var(--pink);
+    color:#fff;
+}
+
+.branch-card{
+    display:none;
+    background:linear-gradient(180deg,#fdf7fa,#f2dbe7);
+    border:none;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.social-btn{
+    background:#ffffffb5;
+    border:1px solid var(--pink);
+    color:#880e4f;
+    font-weight:bold;
+    padding:14px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.social-btn:hover{
+    background:var(--pink);
+    color:#fff;
+}
+
+footer{
+    color:#777;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header-box text-center mb-4">
+    <img src="logo.png" class="logo mb-3" alt="Roza Bella">
+    <h2 class="fw-bold">روزا بِلا</h2>
+    <p class="mb-0">محلات الورد والهدايا</p>
+</div>
+
+<div class="container">
+
+    <!-- Regions -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-4">
+            <button class="w-100 region-btn" onclick="showBranch('khamis')">خميس مشيط</button>
+        </div>
+        <div class="col-md-4">
+            <button class="w-100 region-btn" onclick="showBranch('mohail')">محايل عسير</button>
+        </div>
+        <div class="col-md-4">
+            <button class="w-100 region-btn" onclick="showBranch('bisha')">بيشة</button>
+        </div>
+    </div>
+
+    <!-- خميس مشيط -->
+    <div id="khamis" class="card branch-card p-4 mb-4">
+        <h5 class="text-center text-danger fw-bold mb-4">روزا بِلا – خميس مشيط</h5>
+        <div class="d-grid gap-3">
+            <a class="social-btn text-center" href="https://www.instagram.com/rozabellaksa" target="_blank">Instagram</a>
+            <a class="social-btn text-center" href="https://snapchat.com/t/9Ahyjzp9" target="_blank">Snapchat</a>
+            <a class="social-btn text-center" href="https://www.tiktok.com/@roza.bella.ksa" target="_blank">TikTok</a>
+            <a class="social-btn text-center" href="https://wa.me/message/QJT62PG7SNY7D1" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- محايل -->
+    <div id="mohail" class="card branch-card p-4 mb-4">
+        <h5 class="text-center text-danger fw-bold mb-4">روزا بِلا – محايل عسير</h5>
+        <div class="d-grid gap-3">
+            <a class="social-btn text-center" href="https://www.instagram.com/rozabellaksa" target="_blank">Instagram</a>
+            <a class="social-btn text-center" href="https://www.snapchat.com/add/rozabellakasm" target="_blank">Snapchat</a>
+            <a class="social-btn text-center" href="https://www.tiktok.com/@roza.bella.ksa" target="_blank">TikTok</a>
+            <a class="social-btn text-center" href="https://wa.me/message/QJT62PG7SNY7D1" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- بيشة -->
+    <div id="bisha" class="card branch-card p-4 mb-4">
+        <h5 class="text-center text-danger fw-bold mb-4">روزا بِلا – بيشة</h5>
+        <div class="d-grid gap-3">
+            <a class="social-btn text-center" href="https://snapchat.com/t/sx4pKeoP" target="_blank">Snapchat</a>
+            <a class="social-btn text-center" href="https://www.tiktok.com/@roza.bella.ksa" target="_blank">TikTok</a>
+            <a class="social-btn text-center" href="https://wa.me/message/6EQKE3ZK" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+
+</div>
+
+<footer class="text-center mt-4 mb-3">
+    © روزا بِلا – جميع الحقوق محفوظة
+</footer>
+
+<script>
+function showBranch(id){
+    document.querySelectorAll('.branch-card')
+        .forEach(card => card.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
